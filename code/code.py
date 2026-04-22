@@ -1,16 +1,16 @@
-import sys
+import turtle
+import time
+import random
 
-import pygame, sys
+delay = 0.1
 
-pygame.init()
-screen = pygame.display.set_mode((400, 500))
+# Score
+score = 0
+high_score = 0
 
-while True:
-    #draw elements
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-         pygame.quit()
-        sys.exit()
-        pygame.display.update()
-        
-
+# Set up the screen
+wn = turtle.Screen()
+wn.title("Snake Game by Van")
+wn.bgcolor("green")
+wn.setup(width=600, height=600)
+wn.tracer(0) # Turns off the screen updates
